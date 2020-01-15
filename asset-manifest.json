@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/d3-react-scatterplot/static/css/main.591d9824.chunk.css",
+    "main.js": "/d3-react-scatterplot/static/js/main.8d94d553.chunk.js",
+    "main.js.map": "/d3-react-scatterplot/static/js/main.8d94d553.chunk.js.map",
+    "runtime-main.js": "/d3-react-scatterplot/static/js/runtime-main.5c3bf06e.js",
+    "runtime-main.js.map": "/d3-react-scatterplot/static/js/runtime-main.5c3bf06e.js.map",
+    "static/js/2.18cfe248.chunk.js": "/d3-react-scatterplot/static/js/2.18cfe248.chunk.js",
+    "static/js/2.18cfe248.chunk.js.map": "/d3-react-scatterplot/static/js/2.18cfe248.chunk.js.map",
+    "index.html": "/d3-react-scatterplot/index.html",
+    "precache-manifest.f7b987f4b58887645856aad336feb11a.js": "/d3-react-scatterplot/precache-manifest.f7b987f4b58887645856aad336feb11a.js",
+    "service-worker.js": "/d3-react-scatterplot/service-worker.js",
+    "static/css/main.591d9824.chunk.css.map": "/d3-react-scatterplot/static/css/main.591d9824.chunk.css.map",
+    "static/js/2.18cfe248.chunk.js.LICENSE": "/d3-react-scatterplot/static/js/2.18cfe248.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5c3bf06e.js",
+    "static/js/2.18cfe248.chunk.js",
+    "static/css/main.591d9824.chunk.css",
+    "static/js/main.8d94d553.chunk.js"
+  ]
+}
