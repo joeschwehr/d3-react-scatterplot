@@ -15,7 +15,7 @@ class App extends Component {
         clickedCircle: null
     };
 
-    componentWillMount() {
+    componentDidMount() {
         json('https://udemy-react-d3.firebaseio.com/children.json')
             .then(data => {
                 data = data.map(record => {
