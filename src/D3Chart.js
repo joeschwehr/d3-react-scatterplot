@@ -1,12 +1,13 @@
 import * as d3 from 'd3';
 
 const MARGIN = { TOP: 10, BOTTOM: 80, LEFT: 55, RIGHT: 10 };
-const WIDTH = 600 - MARGIN.LEFT - MARGIN.RIGHT;
+const WIDTH = 550 - MARGIN.LEFT - MARGIN.RIGHT;
 const HEIGHT = 500 - MARGIN.TOP - MARGIN.BOTTOM;
 
 class D3Chart {
     constructor(element, dataFromProps, handleClick) {
         let vis = this;
+        vis.handleClick = handleClick;
 
         // SVG & G
         vis.g = d3
@@ -42,10 +43,10 @@ class D3Chart {
         vis.xAxisGroup = vis.g.append('g').attr('transform', `translate(0, ${HEIGHT})`);
         vis.yAxisGroup = vis.g.append('g');
 
-        vis.update(dataFromProps, handleClick);
+        vis.update(dataFromProps);
     }
 
-    update(dataFromProps, handleClick) {
+    update(dataFromProps) {
         let vis = this;
         vis.data = dataFromProps;
 
@@ -82,9 +83,10 @@ class D3Chart {
         // UPDATE THE STUFF STAYING ON THE SCREEN
         circles
             .attr('r', 8)
-            .attr('fill', 'rgba(0, 111, 111, .8)')
-            .attr('stroke', 'rgba(222,222,222,.3)')
-            .attr('stroke-width', 2)
+            // .attr('fill', 'rgba(0, 111, 111, .8)')
+            // .attr('stroke', 'rgba(222,222,222,.3)')
+            // .attr('stroke-width', 2)
+
             .transition()
             .duration(1000)
             .attr('cx', d => vis.x(d.age))
@@ -100,7 +102,7 @@ class D3Chart {
             .attr('fill', 'rgba(0, 111, 111, .8)')
             .attr('stroke', 'rgba(222,222,222,.3)')
             .attr('stroke-width', 2)
-            .on('click', d => handleClick(d.id))
+            .on('click', d => vis.handleClick(d.id))
             .transition()
             .duration(1000)
             .attr('r', 8);
